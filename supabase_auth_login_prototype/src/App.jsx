@@ -9,7 +9,7 @@ import Home from "@/pages/home/Home.jsx";
 function App() {
     return (
         <Flex>
-            <Home/>
+
         </Flex>
     )
 }

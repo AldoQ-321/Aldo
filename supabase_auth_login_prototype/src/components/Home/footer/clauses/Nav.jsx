@@ -8,13 +8,13 @@ export function NavItemsF({ label, uri, icon }) {
         <List.Item>
 
             <Button
-                color="fg.muted"
+                color={{base:"black", _dark:"white    "}}
                 as={NavLink}
                 to={uri}
-                colorPalette="teal"
+
                 variant="ghost"
 
-                _hover={{ textDecoration: 'none', bg: 'gray.300' }}
+
 
             >
 

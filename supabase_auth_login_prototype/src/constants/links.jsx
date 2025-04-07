@@ -69,7 +69,7 @@ export const homeLinks = [
     },
     {
         label: "Sobre Nosotros",
-        uri: "#",
+        uri: "/nosotros",
     },
     {
         label: "Articulos",
