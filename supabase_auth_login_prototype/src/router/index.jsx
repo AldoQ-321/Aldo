@@ -20,16 +20,24 @@ import Sensores from "@/pages/dashboard/public/Sensores.jsx";
 import Historial from "@/pages/dashboard/public/Historial.jsx";
 import Soporte from "@/pages/dashboard/public/Soporte.jsx";
 import {HomeLayout} from "@/layouts/Root/HomeLayout.jsx";
+import {AboutUsPage} from "@/components/Home/bodyhome/AboutUs.jsx";
 
 export const router = createBrowserRouter([
     // {path:"/", element: <Home/>},
-    {path:"/", element: <HomeLayout/>},
+    {
+        path: "/",
+        element: <HomeLayout />,
+        children: [{ path: "nosotros", element: <AboutUsPage /> },],
+    },
+    {path:"/nosotros", element: <AboutUsPage/>},
     {path:"/login", element: <Login/>},
     {path:"/register", element: <Register/>},
     {path:"/verify-email", element: <VerifyEmail/>},
     //{path:"/dashboard", element: <Wrapper><Dashboard/></Wrapper>},
     //{path:"/profile", element: <Wrapper><ProfileForm/></Wrapper>},
     {path:"*", element: <NotFound/>},
+
+
 
     //Dashboard Admin
     {
@@ -100,3 +108,4 @@ export const router = createBrowserRouter([
         ]},
 
 ])
+

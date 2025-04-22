@@ -65,7 +65,7 @@ export const dashboardLinks = [
 export const homeLinks = [
     {
         label: "Home",
-        uri: "#",
+        uri: "/",
     },
     {
         label: "Sobre Nosotros",
@@ -104,7 +104,7 @@ export const footerLinks = [
 
     {
         label: "Home",
-        uri: "#",
+        uri: "/",
         icon:IoHomeSharp,
 
     },
@@ -117,7 +117,7 @@ export const footerLinks = [
 
     {
         label:"About",
-        uri:"#",
+        uri:"/nosotros",
         icon: HiUserGroup,
     },
 
