@@ -12,7 +12,7 @@ const Headerbar = () => {
 
         <Tabs.Root defaultValue="dates">
             <Box width="100%">
-                <Tabs.List marginLeft="99vh">
+                <Tabs.List>
                     <Tabs.Trigger value="dates">
                         <IoDocumentOutline/>
 

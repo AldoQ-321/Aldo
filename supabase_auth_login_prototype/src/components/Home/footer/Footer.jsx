@@ -22,12 +22,12 @@ export function Footer() {
                 <SimpleGrid textAlign={{lg:'start',base:'center'}} spacing='30px' py='60px' templateColumns={{base:'repeat(1, 1fr)', lg:'repeat(4, 1fr)'}}>
                     <Box >
                         <Heading  pb='20px' color={{base:"#00B5BB", _dark:"#CDF120    "}}>About us</Heading>
-                        <Image m={{base:'auto',lg:'0'}} src='/Unaj.png' alt='Panaverse'></Image>
+                        <Image m={{base:'auto',lg:'0'}} src='/Unaj.png' alt='Unaj'></Image>
                         <Text pt='15px' pr={{lg:'40px',base:'0'}} color='gray'>Una pagina web orientada al resgistro y consulta de datos ambientales </Text>
                     </Box>
 
                     <Box>
-                       <UsefulLinks items={footerLinks} onToggle={onToggle} />
+                        <UsefulLinks items={footerLinks} onToggle={onToggle} />
                     </Box>
 
                     <Box>

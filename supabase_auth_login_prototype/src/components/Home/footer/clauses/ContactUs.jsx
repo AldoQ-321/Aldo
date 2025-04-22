@@ -7,13 +7,13 @@ export function ContactUs({ items = []}) {
 
     return (
         <Box>
-            <Heading color="fg.muted">Contactanos</Heading>
+            <Heading color={{base:"#00B5BB", _dark:"#CDF120    "}}>Contactanos</Heading>
             <Grid pt="40px" color="white">
                 <List.Root
                     justifyContent="center"
                     colorText="white"
                     variant="plain"
-                    flexDirection={{base:"row", md:"column"}}
+                    flexDirection={{base:"row", md:"row", lg:"column"}}
                     gap={1}
 
                 >

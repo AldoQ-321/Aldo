@@ -8,17 +8,17 @@ export function NavItemsF({ label, uri, icon }) {
         <List.Item>
 
             <Button
-                color="fg.muted"
+                color={{base:"black", _dark:"white    "}}
                 as={NavLink}
                 to={uri}
-                colorPalette="teal"
+
                 variant="ghost"
 
-                _hover={{ textDecoration: 'none', bg: 'gray.300' }}
+
 
             >
 
-                    {icon && <Icon as={icon}  />} <Text display={{ base: "none", md:"flex"}}> {label} </Text>
+                {icon && <Icon as={icon}  />} <Text display={{ base: "none", md:"flex"}}> {label} </Text>
 
             </Button>
         </List.Item>

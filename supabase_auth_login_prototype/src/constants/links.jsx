@@ -1,20 +1,10 @@
 
-import {TbLayoutDashboardFilled} from "react-icons/tb";
-import {FaUsers, FaUsersCog, FaCogs, FaList    } from "react-icons/fa";
+import {TbBrandGithubFilled, TbLayoutDashboardFilled} from "react-icons/tb";
+import {FaUsers, FaUsersCog, FaCogs, FaList, FaFacebook, FaTwitter, FaMapMarkerAlt} from "react-icons/fa";
 import { FaSatelliteDish } from "react-icons/fa6";
-
-import { HiUserGroup } from "react-icons/hi";
-import { MdOutlineTravelExplore } from "react-icons/md";
-import { MdPhoneInTalk } from "react-icons/md";
-import { IoHomeSharp } from "react-icons/io5";
-
-import { FaFacebook } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { TbBrandGithubFilled } from "react-icons/tb";
-
-import { MdNumbers } from "react-icons/md";
-import { MdOutlineMailOutline } from "react-icons/md";
-import { FaMapMarkerAlt } from "react-icons/fa";
+import {IoHomeSharp} from "react-icons/io5";
+import {MdNumbers, MdOutlineMailOutline, MdOutlineTravelExplore, MdPhoneInTalk} from "react-icons/md";
+import {HiUserGroup} from "react-icons/hi";
 
 export const dashboardLinks = [
     {
@@ -64,40 +54,39 @@ export const dashboardLinks = [
 
 export const homeLinks = [
     {
-        label: "Home",
+        label: "Inicio",
         uri: "/",
     },
     {
-        label: "Sobre Nosotros",
+        label: "Datos Recogidos",
         uri: "#",
     },
     {
-        label: "Articulos",
-        uri: "#",
-        subitems: [
-            {
-                label: "React",
-                uri: "#",
-            },
-            {
-                label: "JavaScript",
-                uri: "#",
-            },
-            {
-                label: "Next.js",
-                uri: "#",
-            },
-        ],
-    },
-    {
-        label: "Contact",
-        uri: "#",
+        label: "Nosotros",
+        uri: "/nosotros",
     },
     // {
-    //     label: "Nuestra Mision",
+    //     label: "Nosotros",
     //     uri: "#",
+    //     subitems: [
+    //         {
+    //             label: "Developers",
+    //             uri: "#",
+    //         },
+    //         {
+    //             label: "Misión",
+    //             uri: "#",
+    //         },
+    //         {
+    //             label: "Visión",
+    //             uri: "#",
+    //         },
+    //     ],
     // },
-
+    {
+        label: "Contacto",
+        uri: "/contacto",
+    },
 ]
 
 export const footerLinks = [
@@ -110,9 +99,9 @@ export const footerLinks = [
     },
 
     {
-       label: "Explore",
-       uri: "#",
-       icon: MdOutlineTravelExplore,
+        label: "Explore",
+        uri: "#",
+        icon: MdOutlineTravelExplore,
     },
 
     {
@@ -123,7 +112,7 @@ export const footerLinks = [
 
     {
         label: "Contact",
-        uri: "#",
+        uri: "/contacto",
         icon: MdPhoneInTalk,
     },
 
@@ -155,13 +144,13 @@ export const footerFollowus = [
 export const footerContactus = [
 
     {
-        label: "+51 996 262 037",
+        label: "+51 xxx xxx xxx",
         uri: "#",
         icon:MdNumbers,
     },
 
     {
-        label: "2022207020.est@unaj.edu.pe",
+        label: "2022xxxxxx.est@unaj.edu.pe",
         uri: "#",
         icon:MdOutlineMailOutline,
     },
@@ -171,6 +160,4 @@ export const footerContactus = [
         uri:"#",
         icon:FaMapMarkerAlt,
     },
-
-
-]
+    ]

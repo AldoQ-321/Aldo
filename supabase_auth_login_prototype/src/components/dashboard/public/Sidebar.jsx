@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Box, VStack, Button, Text, Icon } from "@chakra-ui/react";
+import { Box, VStack, Button, Text, Flex, Heading } from "@chakra-ui/react";
 import { FiGrid, FiSettings, FiHelpCircle, FiLogOut } from "react-icons/fi";
 import { FaTemperatureHigh, FaRegBell } from "react-icons/fa";
 
@@ -30,34 +30,37 @@ const SidebarUs = () => {
     };
 
     return (
-        <Box as="nav" bg="blue.700" w="250px" p={5} shadow="md" borderRadius="md" alignItems="center">
-            <VStack align="left" spacing={4}>
-                <Text fontSize="lg" fontWeight="bold" color="white">MENU PRINCIPAL</Text>
+        <Box   bg="blue.700" maxWidth={{ base: "70px", md:"250px"}} p={2} shadow="md" borderRadius="md" alignItems="center">
+            <Flex display="flex" >
+            <VStack  gap={6}  mt={3}  spacing={2} justifyContent="flex-start" >
+                <Heading display={{ base: "none", md:"flex"}} fontSize="lg" color="white" >Barra lateral</Heading>
 
                 <Button
                     bg={selected === "dashboard" ? "blue.400" : "transparent"}
                     color={selected === "dashboard" ? "white" : "gray.200"}
                     onClick={() => navigate("dashboard")}
-                    w="full"
+                    w={{base:"max", md:"full"}}
+                    display={{ base: "max", md:"flex" }}
 
-                    mt="3vh"
+
+
                 >
-                    <FiGrid style={{ marginRight: "8px" }} />
-                    Dashboard
+                    <FiGrid m={0} />
+                    <Text display={{ base: "none", md:"flex"}}>Dashboard</Text>
                 </Button>
 
                 <Button
-                    variant="ghost"
+
                     bg={selected === "sensores" ? "blue.400" : "transparent"}
                     color={selected === "sensores" ? "white" : "gray.200"}
                     onClick={() => navigate("sensores")}
-                    w="full"
-                    justifyContent="flex-start"
-                    alignItems="center"
-                    mt="1vh"
+                    w={{base:"max", md:"full"}}
+
+
+
                 >
-                    <FaTemperatureHigh style={{ marginRight: "8px" }} m={0}/>
-                    Sensores
+                    <FaTemperatureHigh m={0}/>
+                    <Text display={{ base: "none", md:"flex"}}>Sensores</Text>
                 </Button>
 
                 <Button
@@ -65,14 +68,14 @@ const SidebarUs = () => {
                     bg={selected === "historial" ? "blue.400" : "transparent"}
                     color={selected === "historial" ? "white" : "gray.200"}
                     onClick={() => navigate("historial")}
-                    w="full"
-                    justifyContent="flex-start"
+                    w={{base:"max", md:"full"}}
+
                     alignItems="center"
-                    mt="1vh"
-                    style={{ marginRight: "8px" }}
+
+
                 >
-                    <FaRegBell style={{ marginRight: "8px" }} m={0} />
-                    Notificaciones
+                    <FaRegBell  m={0} />
+                    <Text display={{ base: "none", md:"flex"}}>Notificaciones</Text>
                 </Button>
 
                 <Button
@@ -80,13 +83,12 @@ const SidebarUs = () => {
                     bg={selected === "configuraciones" ? "blue.400" : "transparent"}
                     color={selected === "configuraciones" ? "white" : "gray.200"}
                     onClick={() => navigate("configuraciones")}
-                    w="full"
-                    justifyContent="flex-start"
-                    mt="1vh"
+                    w={{base:"max", md:"full"}}
+
 
                 >
-                    <FiSettings style={{ marginRight: "8px" }} m={0}/>
-                    Configuraciones
+                    <FiSettings  m={0}/>
+                    <Text display={{ base: "none", md:"flex"}}>configuraciones</Text>
                 </Button>
 
                 <Button
@@ -94,19 +96,23 @@ const SidebarUs = () => {
                     bg={selected === "soporte" ? "blue.400" : "transparent"}
                     color={selected === "soporte" ? "white" : "gray.200"}
                     onClick={() => navigate("soporte")}
-                    w="full"
+                    w={{base:"max", md:"full"}}
                     mt="40vh"
                     style={{ marginRight: "8px" }}
                 >
                     <FiHelpCircle  m={0}/>
-                    Soporte
+                    <Text display={{ base: "none", md:"flex"}}>Soporte</Text>
                 </Button>
 
-                <Button onClick={singOut} w="full" colorScheme="blue" mt={4}>
-                    <FiLogOut style={{ marginRight: "8px", color: "red" }}/>
-                    Cerrar sesión
+                <Button onClick={singOut}
+                        m={0}
+                        w={{base:"max", md:"full"}}
+                        colorScheme="blue" >
+                    <FiLogOut style={{ color: "red" }}/>
+                    <Text display={{ base: "none", md:"flex"}}>Cerrar sesión</Text>
                 </Button>
             </VStack>
+            </Flex>
         </Box>
     );
 };

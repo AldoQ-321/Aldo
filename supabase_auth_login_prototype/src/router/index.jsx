@@ -16,28 +16,43 @@ import Login from "@/pages/auth/Login.jsx";
 import Administracion from "@/pages/dashboard/admin/Administracion.jsx";
 import UserDashboardLayout from "@/layouts/dashboard/public/UserDashboardLayout.jsx";
 import Dash from "@/pages/dashboard/public/Dash.jsx";
-import Sensores from "@/pages/dashboard/public/Sensores.jsx";
 import Historial from "@/pages/dashboard/public/Historial.jsx";
 import Soporte from "@/pages/dashboard/public/Soporte.jsx";
 import {HomeLayout} from "@/layouts/Root/HomeLayout.jsx";
-import {AboutUsPage} from "@/components/Home/bodyhome/AboutUs.jsx";
+import Sensores from "@/pages/dashboard/public/Sensores.jsx";
+import SensoresAd from "@/pages/dashboard/admin/Sensores.jsx";
+import {AboutUsPage} from "@/pages/home/nosotros/AboutUs.jsx";
+import {ContactUsPage} from "@/pages/home/contactos/Contact.jsx";
+
 
 export const router = createBrowserRouter([
-    // {path:"/", element: <Home/>},
+    //Home Layout
     {
-        path: "/",
-        element: <HomeLayout />,
-        children: [{ path: "nosotros", element: <AboutUsPage /> },],
+        path:"/",
+        element: <HomeLayout/>,
+        children:[
+            {
+                index: true,
+                element: <Home />
+            },
+
+            {
+                path: "contacto",
+                element: <ContactUsPage/>
+            },
+
+            {
+            path: "nosotros",
+            element: <AboutUsPage />
+    }]
+
     },
-    {path:"/nosotros", element: <AboutUsPage/>},
     {path:"/login", element: <Login/>},
     {path:"/register", element: <Register/>},
     {path:"/verify-email", element: <VerifyEmail/>},
     //{path:"/dashboard", element: <Wrapper><Dashboard/></Wrapper>},
     //{path:"/profile", element: <Wrapper><ProfileForm/></Wrapper>},
     {path:"*", element: <NotFound/>},
-
-
 
     //Dashboard Admin
     {
@@ -61,11 +76,11 @@ export const router = createBrowserRouter([
             },
             {
                 path: "sensores",
-                element: <h1>Sensores</h1>,
+                element: <SensoresAd/>,
             },
             {
                 path: "reportes",
-                element: <h1>Reportes</h1>,
+                element: <Sensores/>,
             },
             {
                 path: "configuracion",
@@ -108,4 +123,3 @@ export const router = createBrowserRouter([
         ]},
 
 ])
-

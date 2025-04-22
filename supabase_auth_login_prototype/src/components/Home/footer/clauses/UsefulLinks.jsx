@@ -7,13 +7,13 @@ import { NavItemsF } from "@/components/Home/footer/clauses/Nav.jsx";
 export function UsefulLinks({ items = [], icon}) {
     return (
         <Box>
-            <Heading color={{base:"pink", _dark:"violet"}}>Useful Links</Heading>
+            <Heading color={{base:"#00B5BB", _dark:"#CDF120    "}}>Enlaces de interés</Heading>
             <Grid pt="40px" color="white">
                 <List.Root
                     justifyContent="center"
                     colorText="white"
                     variant="plain"
-                    flexDirection={{base:"row", md:"column"}}
+                    flexDirection={{base:"row", md:"row", lg:"column"}}
                     gap={1}
                     display={{ base: "flex", md: "flex" }}
                 >
